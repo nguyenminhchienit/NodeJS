@@ -1,0 +1,9 @@
+h1{
+    color: brown;
+}
+
+img{
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+}
