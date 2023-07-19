@@ -15,6 +15,13 @@ let getHomePage = async (req,res) => {
     return res.render('index.ejs', {dataUser: (rows)});
 }
 
+let getDetailUser = async (req, res) => {
+    let id = req.params.userId;
+    let [user] = await pool.execute(`SELECT * FROM users WHERE id_user = ?`,[id])
+    return res.send(JSON.stringify(user));
+}
+
 module.exports = {
-    getHomePage
+    getHomePage,
+    getDetailUser
 }
