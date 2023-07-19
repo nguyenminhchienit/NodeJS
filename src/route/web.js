@@ -7,6 +7,8 @@ const initWebRouter = (app) => {
     router.get('/', homeController.getHomePage)
 
     router.get('/detail/user/:userId',homeController.getDetailUser)
+
+    router.post('/create-new-user', homeController.createNewUser)
       
     router.get('/home', (req, res) => {
           res.send('Welcome to Takis');

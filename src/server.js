@@ -7,7 +7,9 @@ import pool from "./config/connectDB";
 
 const app = express()
 const port = process.env.PORT || 8080
-console.log(port)
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 //
 configViewEngine(app)
