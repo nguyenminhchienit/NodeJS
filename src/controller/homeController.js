@@ -9,7 +9,7 @@ let getHomePage = (req,res) => {
           console.log(results); // results contains rows returned by server
           //data = results[0]; 
           data = results.map((row) => {return row}) // fields contains extra meta data about results, if available
-          return res.render('index.ejs', {dataUser: JSON.stringify(data)});
+          return res.render('index.ejs', {dataUser: (data)});
         }
         );
 }
