@@ -3,7 +3,7 @@ import configViewEngine from "./config/configViewEngine";
 // require('dotenv').config;
 import {} from 'dotenv/config' 
 import initWebRouter from "./route/web";
-import connection from "./config/connectDB";
+import pool from "./config/connectDB";
 
 const app = express()
 const port = process.env.PORT || 8080
