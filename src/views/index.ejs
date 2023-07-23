@@ -21,7 +21,7 @@
     <div style="padding-left:16px">
         <!-- <%= dataUser %> -->
         <div class="w3-container">
-            <h2>List users table</h2>
+            <!-- <h2>List users table</h2> -->
           
             <table class="w3-table-all w3-hoverable">
               <thead>
@@ -45,9 +45,16 @@
                       <td><%= dataUser[i].firstName %></td>
                       <td><%= dataUser[i].lastName %></td>
                       <td>
-                        <button class="detail"><a href="/detail/user/<%= dataUser[i].id_user %>" target="_blank">Detail</a></button>
-                        <button class="edit">Edit</button>
-                        <button class="delete">Delete</button>
+                        <div class="btn-wrapper">
+                            <button class="detail"><a href="/detail/user/<%= dataUser[i].id_user %>" target="_blank" class="detail">Detail</a></button>
+                            <form action="/update/<%= dataUser[i].id_user %>" method="GET">
+                              <button class="edit" type="submit">Edit</button>
+                            </form>
+                            <form action="/delete-user/<%= dataUser[i].id_user %>" method="POST">
+                              <input type="text" hidden value="<%= dataUser[i].id_user %>" name="userId">
+                              <button class="delete" type="submit">Delete</button>
+                            </form>
+                        </div>
                       </td>
                     </tr>
                  <% } %>
