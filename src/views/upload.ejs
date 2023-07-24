@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Upload</title>
+</head>
+<body>
+
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a class="active" href="/upload">Upload file</a>
+    </div>
+  
+    <div class="upload-file">
+        <h1>Upload file</h1>
+        <form action="/upload-pic" method="POST" enctype="multipart/form-data">
+            <label for="">Chọn file upload</label>
+            <input type="file" name="file_pic">
+
+            <button type="submit" style="margin-left: 20px;">Save file</button>
+        </form>
+    </div>
+    
+</body>
+</html>
