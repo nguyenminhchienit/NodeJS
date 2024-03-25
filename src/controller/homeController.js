@@ -74,7 +74,6 @@ const imageFilter = function(req, file, cb) {
 const upload = multer().single('file_pic');
 let handleUploadFile = async (req,res) => {
     // 'profile_pic' is the name of our file input field in the HTML form
-    //let upload = multer({ storage: storage, fileFilter: imageFilter }).single('file_pic');
 
     upload(req, res, function(err) {
         // req.file contains information of uploaded file
